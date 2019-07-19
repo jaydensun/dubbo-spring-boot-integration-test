@@ -13,7 +13,7 @@ public class DubboAutoConfigurationConsumerBootstrap {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Reference(version = "1.0.0", url = "dubbo://127.0.0.1:12345")
+    @Reference(version = "1.0.0")
     private DemoService demoService;
 
     public static void main(String[] args) {
