@@ -25,16 +25,16 @@ public class GenericConsumerApp {
     @Bean
     public ApplicationRunner runner() {
         return args -> {
-            logger.info("" + demoService.$invoke("sayHello", new String[]{String.class.getName()},
-                    new String[] {"mercyblitz"}));
+            logger.info(String.valueOf(demoService.$invoke("sayHello", new String[]{String.class.getName()},
+                    new String[] {"mercyblitz"})));
         };
     }
 
     @Bean
     public ApplicationRunner runner2() {
         return args -> {
-            logger.info("" + demoService.$invoke("sayHello", new String[]{String.class.getName()},
-                    new String[] {"mercyblitz2"}));
+            logger.info(String.valueOf(demoService.$invoke("sayHello", new String[]{String.class.getName()},
+                    new String[] {"mercyblitz2"})));
         };
     }
 }

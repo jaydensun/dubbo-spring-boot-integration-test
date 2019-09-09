@@ -23,14 +23,14 @@ public class ConsumerApp {
     @Bean
     public ApplicationRunner runner() {
         return args -> {
-            logger.info(demoService.sayHello("mercyblitz"));
+            logger.info(demoService.sayHello("mercyblitz").toString());
         };
     }
 
     @Bean
     public ApplicationRunner runner2() {
         return args -> {
-            logger.info(demoService.sayHello("mercyblitz2"));
+            logger.info(demoService.sayHello("mercyblitz2").toString());
         };
     }
 

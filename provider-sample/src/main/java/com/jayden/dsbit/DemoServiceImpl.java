@@ -12,7 +12,7 @@ public class DemoServiceImpl implements DemoService {
     @Value("${dubbo.application.name}")
     private String serviceName;
 
-    public String sayHello(String name) {
-        return String.format("=========[%s] : Hello, %s", serviceName, name);
+    public HelloResponse sayHello(String name) {
+        return new HelloResponse(String.format("[%s] : Hello, %s", serviceName, name));
     }
 }
