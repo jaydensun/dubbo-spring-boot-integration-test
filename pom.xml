@@ -6,13 +6,15 @@
 
     <groupId>com.jayden</groupId>
     <artifactId>dubbo-spring-boot-integration-test</artifactId>
-    <version>${revision}</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>sample-common</module>
         <module>consumer-sample</module>
+        <module>consumer-generic-sample</module>
         <module>provider-sample</module>
+        <module>provider-generic-sample</module>
     </modules>
 
     <properties>
@@ -21,7 +23,6 @@
         <java.target.version>1.8</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.6.0</maven-compiler-plugin.version>
-        <revision>1.0-SNAPSHOT</revision>
         <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
         <dubbo.version>2.7.1</dubbo.version>
     </properties>
