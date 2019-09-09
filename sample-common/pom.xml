@@ -11,4 +11,11 @@
 
     <artifactId>sample-common</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>

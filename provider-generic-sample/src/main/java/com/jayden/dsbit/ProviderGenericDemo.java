@@ -1,6 +1,6 @@
 package com.jayden.dsbit;
 
-import org.apache.dubbo.config.ServiceConfig;
+import org.apache.dubbo.config.spring.ServiceBean;
 import org.apache.dubbo.rpc.service.GenericService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -16,16 +16,16 @@ public class ProviderGenericDemo {
     }
 
     @Bean
-    public static void service() {
-        ServiceConfig<GenericService> serviceConfig = new ServiceConfig<>();
-        serviceConfig.setInterface("com.jayden.dsbit.DemoService");
-        serviceConfig.setDynamic(true);
-        serviceConfig.setVersion("1.0.0");
-        serviceConfig.setRef((method, parameterTypes, args) -> {
+    public static ServiceBean<GenericService> service() {
+        ServiceBean<GenericService> serviceBean = new ServiceBean<>();
+        serviceBean.setInterface("com.jayden.dsbit.DemoService");
+        serviceBean.setDynamic(true);
+        serviceBean.setVersion("1.0.0");
+        serviceBean.setRef((method, parameterTypes, args) -> {
             HashMap<String, String> map = new HashMap<>();
             map.put("msg", "hello : " + args[0]);
             return map;
         });
-        serviceConfig.export();
+        return serviceBean;
     }
 }

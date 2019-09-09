@@ -13,7 +13,7 @@ public class ConsumerApp {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Reference(version = "1.0.0")
+    @Reference(version = "1.0.0", retries = 0)
     private DemoService demoService;
 
     public static void main(String[] args) {

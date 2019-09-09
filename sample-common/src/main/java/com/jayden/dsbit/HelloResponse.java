@@ -7,6 +7,9 @@ package com.jayden.dsbit;
 public class HelloResponse {
     private String msg;
 
+    public HelloResponse() {
+    }
+
     public HelloResponse(String msg) {
         this.msg = msg;
     }
